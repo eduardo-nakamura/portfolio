@@ -1,3 +1,9 @@
+const menuLinks = [
+  {location: '/home', name: 'Home'},
+  {location: '/invoices', name: 'Invoices'},
+  {location: '/about', name: 'About'},
+]
+
 let invoices = [
   {
     name: "Santa Monica",
@@ -45,4 +51,8 @@ export function deleteInvoice(number) {
   invoices = invoices.filter(
     (invoice) => invoice.number !== number
   );
+}
+
+export function getLinks() {
+  return menuLinks
 }
