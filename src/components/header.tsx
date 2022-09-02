@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { getLinks } from "../assets/data"
+import { useTranslation } from 'react-i18next';
+
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -16,10 +18,14 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from "react-router-dom";
 
-
+const lngs = {
+  en: { nativeName: 'English' },
+  de: { nativeName: 'Deutsch' }
+};
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
+  const { t, i18n } = useTranslation();
   let menuLinks = getLinks();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -48,7 +54,6 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -94,7 +99,9 @@ const ResponsiveAppBar = () => {
               {menuLinks.map((page,index) => (
                 <MenuItem key={'link-mobile' + index } onClick={handleCloseNavMenu}>                  
                   <Link key={'btn-' + index} to={page.location}>
-                    <Typography textAlign="center">{page.name}</Typography>
+                    <Typography textAlign="center">
+                      {t(page.name)}
+                    </Typography>
                   </Link>
                 </MenuItem>
               ))}
@@ -121,8 +128,15 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {menuLinks.map((page,index) => (
-                <Link className="btn-header" key={'btn-' + index} to={page.location}>{page.name}</Link>           
+                <Link className="btn-header" key={'btn-' + index} to={page.location}>{t(page.name)}</Link>           
             ))}
+              <div>
+                {Object.keys(lngs).map((lng: any) => (
+                    <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+                        {/* {lngs[lng].nativeName} */}aa
+                    </button>
+                ))}
+            </div>
           </Box>
 
           {/* <Box sx={{ flexGrow: 0 }}>

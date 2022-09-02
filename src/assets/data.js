@@ -1,7 +1,7 @@
 const menuLinks = [
-  {location: '/home', name: 'Home'},
-  {location: '/invoices', name: 'Invoices'},
-  {location: '/about', name: 'About'},
+  {location: '/home', name: 'home'},
+  {location: '/invoices', name: 'invoices'},
+  {location: '/about', name: 'about'},
 ]
 
 let invoices = [

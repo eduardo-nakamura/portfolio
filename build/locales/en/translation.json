@@ -1,0 +1,9 @@
+{
+    "home": "Home",
+    "invoices": "Invoices",
+    "about": "About",
+    "description": {
+        "part1": "Edit <1>src/App.js</1> and save to reload.s",
+        "part2": "Learn React"
+    }
+}

@@ -8,6 +8,8 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Invoices from "./pages/Invoices"
 import InvoiceDetail from "./pages/InvoiceDetail"
+import './i18n';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

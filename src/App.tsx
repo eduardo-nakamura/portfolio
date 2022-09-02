@@ -17,7 +17,7 @@ function App() {
         }}
       >
         <Link to="/home">Home</Link> 
-        <Link to="/invoices">Invoices</Link> 
+        <Link to="/invoices">Invoices</Link> |{" "}
         <Link to="/about">About</Link>
       </nav> */}
       <Outlet />
