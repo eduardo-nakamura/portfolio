@@ -30,7 +30,7 @@ root.render(
           <Route path=":invoiceId" element={<InvoiceDetail />} />
         </Route>
         <Route
-          path="*"
+          path="*" 
           element={
             <main style={{ padding: "1rem" }}>
               <p>There's nothing here!</p>
