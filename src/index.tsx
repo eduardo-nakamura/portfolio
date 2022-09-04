@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Invoices from "./pages/Invoices"
@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     {/* <App /> */}
     <Routes>
       <Route path="/" element={<App />}>
@@ -41,7 +41,7 @@ root.render(
         />
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 reportWebVitals();
