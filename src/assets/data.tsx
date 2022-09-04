@@ -1,7 +1,10 @@
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+
 const menuLinks = [
-  {location: '/home', name: 'home'},
-  {location: '/invoices', name: 'invoices'},
-  {location: '/about', name: 'about'},
+  {location: '/home', name: 'home', icon: HomeIcon},
+  // {location: '/invoices', name: 'invoices'},
+  {location: '/about', name: 'about', icon: InfoIcon},
 ]
 
 let invoices = [
@@ -41,13 +44,13 @@ export function getInvoices() {
   return invoices;
 }
 
-export function getInvoice(number) {
+export function getInvoice(number: number | undefined) {
   return invoices.find(
     (invoice) => invoice.number === number
   );
 }
 
-export function deleteInvoice(number) {
+export function deleteInvoice(number: number | undefined) {
   invoices = invoices.filter(
     (invoice) => invoice.number !== number
   );

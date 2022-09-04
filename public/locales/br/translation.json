@@ -1,9 +1,19 @@
 {
-  "home": "Home",
+  "home": "Pagina Principal",
   "invoices": "Faturas",
   "about": "Sobre",
+  "toggleDark": "Ativar Modo Escuro",
+  "toggleLight": "Ativar Modo Claro",  
+  "language": "Linguagem",
   "description": {
     "part1": "Editar <1>src/App.js</1> e salve arquivo.",
     "part2": "Aprenda React"
+  },
+  "aboutPage": {
+    "part1": "Desenvolvedor Front-End",
+    "part2": "Essa pagina foi feita usando ReactJs.<br/> Componentes usados: <1>MUI, React Router DOM,i18next</1>."
+  },
+  "footer": {
+    "part1": "E-mail para contato"
   }
 }

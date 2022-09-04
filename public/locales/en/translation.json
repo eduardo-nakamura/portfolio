@@ -2,8 +2,18 @@
     "home": "Home",
     "invoices": "Invoices",
     "about": "About",
+    "toggleDark": "Toggle Dark Mode",
+    "toggleLight": "Toggle Light Mode",  
+    "language": "Language",
     "description": {
         "part1": "Edit <1>src/App.js</1> and save to reload.s",
         "part2": "Learn React"
+    },
+    "aboutPage": {
+      "part1": "Front-end Developer",
+      "part2": "This page was made using ReactJs.<br/> Components used: <1>MUI, React Router DOM,i18next</1>."
+    },
+    "footer": {
+      "part1": "Contact E-mail:"
     }
 }

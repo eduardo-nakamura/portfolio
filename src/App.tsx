@@ -1,27 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react'
+
 import './App.css';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import ResponsiveAppBar from "./components/header"
+import Footer from "./components/footer"
+import { red } from '@mui/material/colors';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+
+const theme = createTheme({
+  palette: {
+    mode: 'light',
+    // primary: {
+    //   main: '#90caf9',
+    // },
+    // secondary: {
+    //   main: '#f48fb1',
+    // },
+    // background: {
+    //   default: '#212121',
+    //   paper: '#424242',
+    // },
+  },
+});
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#90caf9',
+    },
+    secondary: {
+      main: '#f48fb1',
+    },
+    background: {
+      default: '#212121',
+      paper: '#424242',
+    },
+  },
+});
 
 function App() {
-  
+  const [themeSelect, setTheme] = useState(true)
   return (
-    <div>
-  
-      <ResponsiveAppBar />
-      {/* <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
-        <Link to="/home">Home</Link> 
-        <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/about">About</Link>
-      </nav> */}
-      <Outlet />
-    </div>
+    <ThemeProvider theme={themeSelect ? darkTheme : theme}>
+      <CssBaseline />
+
+      <ResponsiveAppBar themeSelect={themeSelect} setTheme={setTheme} />
+      <Container sx={{pt: 8,
+            pb: 6,}}>
+        <Outlet />
+      </Container>
+      <Footer />
+    </ThemeProvider >
   );
 }
 

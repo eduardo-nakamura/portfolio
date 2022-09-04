@@ -1,55 +1,71 @@
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { getLinks } from "../assets/data"
 import { useTranslation } from 'react-i18next';
+import aboutAvatar from "../assets/picture.png";
+import DeleteIcon from '@mui/icons-material/Delete';
 
+import {
+  List, ListItem, ListItemButton, ListItemIcon, ListItemText, Drawer, Avatar, AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, ButtonGroup, Tooltip, MenuItem
+} from '@mui/material';
 
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import BrIcon from "../assets/br.png";
+import UsIcon from "../assets/us.png";
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { Link } from "react-router-dom";
 
-const lngs = {
-  en: { nativeName: 'English' },
-  de: { nativeName: 'Deutsch' }
-};
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+type Anchor = 'left' | 'right';
 
-const ResponsiveAppBar = () => {
+
+const ResponsiveAppBar = (props: any) => {
   const { t, i18n } = useTranslation();
   let menuLinks = getLinks();
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  // const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  // const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [state, setState] = useState({ left: false, right: false });
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const toggleDrawer =
+    (anchor: Anchor, open: boolean) =>
+      (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+          event.type === 'keydown' &&
+          ((event as React.KeyboardEvent).key === 'Tab' ||
+            (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+          return;
+        }
+
+        setState({ ...state, [anchor]: open });
+      };
+
+  // const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  //   setAnchorElNav(event.currentTarget);
+  // };
+  // const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
+
+  // const handleCloseNavMenu = () => {
+  //   setAnchorElNav(null);
+  // };
+
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+
+          <Avatar sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} alt="Eduardo Nakamura" src={aboutAvatar} />
           <Typography
             variant="h6"
             noWrap
@@ -59,7 +75,7 @@ const ResponsiveAppBar = () => {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-            //   letterSpacing: '.3rem',
+              //   letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
@@ -73,41 +89,33 @@ const ResponsiveAppBar = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={toggleDrawer('left', true)}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
+            <Drawer
+              anchor={'left'}
+              open={state['left']}
+              onClose={toggleDrawer('left', false)}
             >
-              {menuLinks.map((page,index) => (
-                <MenuItem key={'link-mobile' + index } onClick={handleCloseNavMenu}>                  
-                  <Link key={'btn-' + index} to={page.location}>
-                    <Typography textAlign="center">
-                      {t(page.name)}
-                    </Typography>
-                  </Link>
-                </MenuItem>
-              ))}
-            </Menu>
+              <Box role="presentation" onClick={toggleDrawer('left', false)} onKeyDown={toggleDrawer('left', false)}>
+                <List>
+                  {menuLinks.map((page, index) => (
+                    <ListItem key={'btn-' + index} button component={Link} to={page.location}>
+                      <ListItemButton>
+                        <page.icon sx={{ mr: 1 }} />
+                        <ListItemText primary={t(page.name)} />
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
+
+                </List>
+              </Box>
+            </Drawer>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+
+          <Avatar sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} alt="Eduardo Nakamura" src={aboutAvatar} />
           <Typography
             variant="h5"
             noWrap
@@ -124,50 +132,55 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Eduardo
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {menuLinks.map((page,index) => (
-                <Link className="btn-header" key={'btn-' + index} to={page.location}>{t(page.name)}</Link>           
+            {menuLinks.map((page, index) => (
+              <Link className="btn-header" key={'btn-' + index} to={page.location}>{t(page.name)}</Link>
             ))}
-              <div>
-                {Object.keys(lngs).map((lng: any) => (
-                    <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
-                        {/* {lngs[lng].nativeName} */}aa
-                    </button>
-                ))}
-            </div>
+
+
           </Box>
 
-          {/* <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <IconButton onClick={toggleDrawer('right', true)} sx={{ p: 0 }}>
+                <SettingsIcon />
               </IconButton>
             </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+            <Drawer
+              anchor={'right'}
+              open={state['right']}
+              onClose={toggleDrawer('right', false)}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
+              <Box role="presentation" onClick={toggleDrawer('left', false)} onKeyDown={toggleDrawer('left', false)}>
+                <List>
+                  <ListItem>
+                    <ListItemButton onClick={() => props.setTheme(!props.themeSelect)}>
+                      {props.themeSelect ? <Brightness7Icon /> : <Brightness4Icon />}
+                      <ListItemText primary={t(props.themeSelect ? 'toggleDark' : 'toggleLight')} />
+                    </ListItemButton>
+                  </ListItem>
+
+                  <ListItem >
+                    <Box>
+                      <Typography sx={{pb:1}}>{t("language")} </Typography>
+                      <ButtonGroup>
+                        <Button onClick={() => i18n.changeLanguage('br')} variant={i18n.resolvedLanguage === 'br' ? "contained" : "outlined"}>
+                          <img style={{ width: '25px' }} src={BrIcon} alt="Português Brasileior" />
+                        </Button>
+                        <Button onClick={() => i18n.changeLanguage('en')} variant={i18n.resolvedLanguage === 'en' ? "contained" : "outlined"}>
+                          <img style={{ width: '25px' }} src={UsIcon} alt="English" />
+                        </Button>
+                      </ButtonGroup>
+                    </Box>
+
+                  </ListItem>
+
+                </List>
+              </Box>
+            </Drawer>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
