@@ -1,18 +1,36 @@
 {
-  "home": "Pagina Principal",
+  "home": {
+    "name": "Página Principal",
+    "part1": "Alguns projetos de Front-end usando HTML, CSS, Javascript, ReactJs e Angular",
+    "part2": "Link para Github",
+    "page": "Link Página",
+    "repository": "Repositório"
+  },
+  "repository":{
+    "rpg-apps-angular":"Aplicativo para RPG",
+    "rpg-apps-angular-desc":"Um aplicativo simples de RPG com rolagem de dados, Hooks, gerador de Tesouro, rastreador de iniciativa e gerador de npc para dnd 4ª edição",
+    "todo-app":"Lista de Tarefas",
+    "todo-app-desc":"Um aplicativo com lista de Tarefas. Usuário pode adicionar Tarefa, marcar/desmarcar e remover tarefa. Aula ministrada por Dev Ed",
+    "pokedex":"Agenda Pokemon",
+    "pokedex-desc":"Uma Pokédex Simples. Você pode pesquisar Pokémons pelo nome e ver seus detalhes. API usada: pokeapi",
+    "wwe-trivia-rumble":"WWE Trivia Rumble",
+    "wwe-trivia-rumble-desc":"Uma lista com perguntas relacionadas à WWE. Você pode filtrar digitando a pergunta na caixa de texto. ",
+    "alura-cursos":"Repósitorio do Curso Alura",
+    "alura-cursos-desc":"Repositório dos arquivos do Curso Alura",
+    "tour-of-heroes":"Lista de Heróis",
+    "tour-of-heroes-desc":"Tutorial de Angular. Lista de Super-Herois",
+    "lost-judgement-tsx":"Lost Judgement Lista de Material",
+    "lost-judgement-tsx-desc":"Lista de Material para o jogo Lost Judgement"
+  },
   "invoices": "Faturas",
-  "about": "Sobre",
+  "about": {
+    "name": "Sobre",
+    "part1": "Desenvolvedor Front-end",
+    "part2": "Essa pagina foi feita usando ReactJs.<br/> Componentes usados:"
+  },
   "toggleDark": "Ativar Modo Escuro",
   "toggleLight": "Ativar Modo Claro",  
   "language": "Linguagem",
-  "description": {
-    "part1": "Editar <1>src/App.js</1> e salve arquivo.",
-    "part2": "Aprenda React"
-  },
-  "aboutPage": {
-    "part1": "Desenvolvedor Front-End",
-    "part2": "Essa pagina foi feita usando ReactJs.<br/> Componentes usados: <1>MUI, React Router DOM,i18next</1>."
-  },
   "footer": {
     "part1": "E-mail para contato"
   }

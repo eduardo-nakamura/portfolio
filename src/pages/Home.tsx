@@ -6,12 +6,15 @@ import {
     CardContent,
     CardActions
 } from '@mui/material';
+import {projectsList} from "../assets/data"
+import { Link } from "react-router-dom";
+
 export default function Home() {
     const { t } = useTranslation();
-    const cards = [1];
+ 
     return (
         <>
-            <Typography variant="h5">{t('home')}</Typography>
+  
 
             <Box
                 sx={{
@@ -28,12 +31,10 @@ export default function Home() {
                         color="text.primary"
                         gutterBottom
                     >
-                        {t('home')}
+                        {t('home.name')}
                     </Typography>
                     <Typography variant="h5" align="center" color="text.secondary" paragraph>
-                        Something short and leading about the collection below—its contents,
-                        the creator, etc. Make it short and sweet, but not too short so folks
-                        don&apos;t simply skip over it entirely.
+                        {t('home.part1')}
                     </Typography>
                     <Stack
                         sx={{ pt: 4 }}
@@ -41,39 +42,37 @@ export default function Home() {
                         spacing={2}
                         justifyContent="center"
                     >
-                        <Button variant="contained">Main call to action</Button>
-                        <Button variant="outlined">Secondary action</Button>
+                        <Button href={`https://github.com/eduardo-nakamura/`} target="_blank" variant="contained">{t('home.part2')}</Button>
                     </Stack>
                 </Container>
             </Box>
             <Container sx={{ py: 8 }} maxWidth="md">
                 <Grid container spacing={4}>
-                    {cards.map((card) => (
-                        <Grid item key={card} xs={12} sm={6} md={4}>
+                    {projectsList.map((card) => (
+                        <Grid item key={card.git} xs={12} sm={6} md={4}>
                             <Card
                                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                             >
                                 <CardMedia
                                     component="img"
-                                    sx={{
-                                        // 16:9
-                                        pt: '56.25%',
-                                    }}
-                                    image="https://source.unsplash.com/random"
+                                    image={card.img} 
+                                    // sx={{
+                                    //     height: '20vh',
+                                    //     backgroundPosition: '0 0'
+                                    // }}
                                     alt="random"
                                 />
                                 <CardContent sx={{ flexGrow: 1 }}>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Heading
+                                        {t(`repository.${card.git}`)}
                                     </Typography>
                                     <Typography>
-                                        This is a media card. You can use this section to describe the
-                                        content.
+                                    {t(`repository.${card.git}-desc`)}
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small">View</Button>
-                                    <Button size="small">Edit</Button>
+                                    <Button variant="contained" href={`https://eduardo-nakamura.github.io/${card.git}`} target="_blank" size="small">{t("home.page")}</Button>
+                                    <Button variant="outlined" href={`https://github.com/eduardo-nakamura/${card.git}`} target="_blank" size="small">{t("home.repository")}</Button>
                                 </CardActions>
                             </Card>
                         </Grid>

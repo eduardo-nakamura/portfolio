@@ -1,10 +1,26 @@
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
+import RpgImg from "../assets/rpg-apps-angular.png"
+import ToDoImg from "../assets/todo-app.png"
+import PokedexImg from "../assets/pokedex.png"
+import WWEImg from "../assets/wwe-trivia-rumble.png"
+import TourOfHeroesImg from "../assets/tour-of-heroes.png"
+import LostJudgementImg from "../assets/lost-judgement-tsx.png"
+import AluraImg from "../assets/alura-cursos.png"
 
 const menuLinks = [
-  {location: '/home', name: 'home', icon: HomeIcon},
-  // {location: '/invoices', name: 'invoices'},
-  {location: '/about', name: 'about', icon: InfoIcon},
+  {location: '/home', name: 'home.name', icon: HomeIcon},
+  {location: '/about', name: 'about.name', icon: InfoIcon},
+]
+
+export const projectsList = [
+  {git: 'rpg-apps-angular', name: 'home.rpg-apps-angular',description:"home.rpg-apps-angular-desc", img: RpgImg, type: "Angular"},
+  {git: 'todo-app', name: 'home.todo-app',description:"home.todo-app-desc", img: ToDoImg, type: "React"},
+  {git: 'pokedex', name: 'home.pokedex',description:"home.pokedex-desc", img: PokedexImg, type: "React"},
+  {git: 'wwe-trivia-rumble', name: 'home.wwe-trivia-rumble',description:"home.wwe-trivia-rumble-desc", img: WWEImg, type: "React"},
+  {git: 'tour-of-heroes', name: 'home.tour-of-heroes',description:"home.tour-of-heroes-desc", img: TourOfHeroesImg, type: "Angular"},
+  {git: 'lost-judgement-tsx', name: 'home.lost-judgement-tsx',description:"home.lost-judgement-tsx-desc", img: LostJudgementImg, type: "React"},
+  {git: 'alura-cursos', name: 'home.alura-cursos',description:"home.alura-cursos-desc", img: AluraImg, type: "ETC"},
 ]
 
 let invoices = [

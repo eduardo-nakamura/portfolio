@@ -1,18 +1,36 @@
 {
-    "home": "Home",
+    "home": {
+      "name": "Home",
+      "part1": "Some Front-End projects made using HTML, CSS, Javascript, ReactJS and Angular",
+      "part2": "GitHub Link",
+      "page": "Link Page",
+      "repository": "Repository"
+    },
+    "repository":{
+      "rpg-apps-angular":"RPG App",
+      "rpg-apps-angular-desc":"A simple RPG companion app with dice roller, game hooks, loot generator, initiative tracker and npc generator for dnd 4th edition",
+      "todo-app":"Todo List",
+      "todo-app-desc":"A Todo List App. User can add Todo, toggle status and remove Todo. React course by Dev Ed.",
+      "pokedex":"Pokedex",
+      "pokedex-desc":"A Simple Pokedex. You can search Pokemons by name and see their details. Api used: pokeapi",
+      "wwe-trivia-rumble":"WWE Trivia Rumble",
+      "wwe-trivia-rumble-desc":"A list with trivia questions related to WWE. You can filter by typing the question on the input box. ",
+      "alura-cursos":"Alura Repository",
+      "alura-cursos-desc":"Files from the Alura Classes",
+      "tour-of-heroes":"Tour of Heroes",
+      "tour-of-heroes-desc":"Angular Tutorial. List of Super Heroes",
+      "lost-judgement-tsx":"Lost Judgement Material List",
+      "lost-judgement-tsx-desc":"Material List for the game Lost Judgement"
+    },
     "invoices": "Invoices",
-    "about": "About",
+    "about": {
+      "name": "About",
+      "part1": "Front-end Developer",
+      "part2": "This page was made using ReactJs.<br/> Components used:"
+    },
     "toggleDark": "Toggle Dark Mode",
     "toggleLight": "Toggle Light Mode",  
     "language": "Language",
-    "description": {
-        "part1": "Edit <1>src/App.js</1> and save to reload.s",
-        "part2": "Learn React"
-    },
-    "aboutPage": {
-      "part1": "Front-end Developer",
-      "part2": "This page was made using ReactJs.<br/> Components used: <1>MUI, React Router DOM,i18next</1>."
-    },
     "footer": {
       "part1": "Contact E-mail:"
     }

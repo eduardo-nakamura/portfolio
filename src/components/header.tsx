@@ -2,20 +2,16 @@ import { useState, useEffect } from 'react';
 import { getLinks } from "../assets/data"
 import { useTranslation } from 'react-i18next';
 import aboutAvatar from "../assets/picture.png";
-import DeleteIcon from '@mui/icons-material/Delete';
 
 import {
-  List, ListItem, ListItemButton, ListItemIcon, ListItemText, Drawer, Avatar, AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, ButtonGroup, Tooltip, MenuItem
+  List, ListItem, ListItemButton,  ListItemText, Drawer, Avatar, AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, ButtonGroup, Tooltip, MenuItem
 } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import BrIcon from "../assets/br.png";
 import UsIcon from "../assets/us.png";
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Link } from "react-router-dom";
 
@@ -25,8 +21,6 @@ type Anchor = 'left' | 'right';
 const ResponsiveAppBar = (props: any) => {
   const { t, i18n } = useTranslation();
   let menuLinks = getLinks();
-  // const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  // const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   const [state, setState] = useState({ left: false, right: false });
 
 
