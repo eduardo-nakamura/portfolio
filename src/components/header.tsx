@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { getLinks } from "../assets/data"
 import { useTranslation } from 'react-i18next';
 import aboutAvatar from "../assets/picture.png";
+import { useTheme } from '@mui/material/styles';
 
 import {
-  List, ListItem, ListItemButton,  ListItemText, Drawer, Avatar, AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, ButtonGroup, Tooltip, MenuItem
+  List, ListItem, ListItemButton, ListItemText, Drawer, Avatar, AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, ButtonGroup, Tooltip, MenuItem
 } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -22,7 +23,7 @@ const ResponsiveAppBar = (props: any) => {
   const { t, i18n } = useTranslation();
   let menuLinks = getLinks();
   const [state, setState] = useState({ left: false, right: false });
-
+  const theme = useTheme();
 
 
   const toggleDrawer =
@@ -132,12 +133,25 @@ const ResponsiveAppBar = (props: any) => {
             {menuLinks.map((page, index) => (
               <Link className="btn-header" key={'btn-' + index} to={page.location}>{t(page.name)}</Link>
             ))}
-
-
           </Box>
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Button color="secondary" onClick={() => props.setTheme(!props.themeSelect)}>
+              {props.themeSelect ? <Brightness7Icon /> : <Brightness4Icon />}
+              
+            </Button>
+            <ButtonGroup color="secondary">
+
+              <Button onClick={() => i18n.changeLanguage('br')} variant={i18n.resolvedLanguage === 'br' ? "contained" : "outlined"}>
+                <img style={{ width: '25px' }} src={BrIcon} alt="Português Brasileior" />
+              </Button>
+              <Button onClick={() => i18n.changeLanguage('en')} variant={i18n.resolvedLanguage === 'en' ? "contained" : "outlined"}>
+                <img style={{ width: '25px' }} src={UsIcon} alt="English" />
+              </Button>
+            </ButtonGroup>
+          </Box>
+          <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
+            <Tooltip title="Open settings" >
               <IconButton onClick={toggleDrawer('right', true)} sx={{ p: 0 }}>
                 <SettingsIcon />
               </IconButton>
@@ -158,7 +172,7 @@ const ResponsiveAppBar = (props: any) => {
 
                   <ListItem >
                     <Box>
-                      <Typography sx={{pb:1}}>{t("language")} </Typography>
+                      <Typography sx={{ pb: 1 }}>{t("language")} </Typography>
                       <ButtonGroup>
                         <Button onClick={() => i18n.changeLanguage('br')} variant={i18n.resolvedLanguage === 'br' ? "contained" : "outlined"}>
                           <img style={{ width: '25px' }} src={BrIcon} alt="Português Brasileior" />

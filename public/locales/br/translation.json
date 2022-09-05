@@ -31,6 +31,8 @@
   "toggleDark": "Ativar Modo Escuro",
   "toggleLight": "Ativar Modo Claro",  
   "language": "Linguagem",
+  "all": "Todos",
+  "others": "Outros",
   "footer": {
     "part1": "E-mail para contato"
   }

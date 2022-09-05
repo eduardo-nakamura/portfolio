@@ -21,19 +21,11 @@ export default function About() {
 
     return (
         <>
-            <Box sx={{ textAlign: 'center', pb: 5 }}>
+            <Box sx={{ textAlign: 'center', pb: 3 }}>
                 <img alt="Eduardo Nakamura" src={aboutAvatar}
-                    style={{ width: '50%', maxWidth: '250px', borderRadius: '50%' }} />
+                    style={{ width: '50%', maxWidth: '200px', borderRadius: '50%' }} />
             </Box>
-            {/* 
-            <Typography component="h1"
-                variant="h2"
-                align="center"
-                color="text.primary"
-                gutterBottom>
-                {t('about')}
-            </Typography> */}
-            <Typography component="h1" variant="h3" align="center" color="text.secondary" paragraph>
+            <Typography component="h1" variant="h4" align="center" color="text.secondary" paragraph>
                 Eduardo Issamu Nakamura
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
