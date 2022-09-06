@@ -6,21 +6,21 @@
     "page": "Link Página",
     "repository": "Repositório"
   },
-  "repository":{
-    "rpg-apps-angular":"Aplicativo para RPG",
-    "rpg-apps-angular-desc":"Um aplicativo simples de RPG com rolagem de dados, Hooks, gerador de Tesouro, rastreador de iniciativa e gerador de npc para dnd 4ª edição",
-    "todo-app":"Lista de Tarefas",
-    "todo-app-desc":"Um aplicativo com lista de Tarefas. Usuário pode adicionar Tarefa, marcar/desmarcar e remover tarefa. Aula ministrada por Dev Ed",
-    "pokedex":"Agenda Pokemon",
-    "pokedex-desc":"Uma Pokédex Simples. Você pode pesquisar Pokémons pelo nome e ver seus detalhes. API usada: pokeapi",
-    "wwe-trivia-rumble":"WWE Trivia Rumble",
-    "wwe-trivia-rumble-desc":"Uma lista com perguntas relacionadas à WWE. Você pode filtrar digitando a pergunta na caixa de texto. ",
-    "alura-cursos":"Repósitorio do Curso Alura",
-    "alura-cursos-desc":"Repositório dos arquivos do Curso Alura",
-    "tour-of-heroes":"Lista de Heróis",
-    "tour-of-heroes-desc":"Tutorial de Angular. Lista de Super-Herois",
-    "lost-judgement-tsx":"Lost Judgement Lista de Material",
-    "lost-judgement-tsx-desc":"Lista de Material para o jogo Lost Judgement"
+  "repository": {
+    "rpg-apps-angular": "Aplicativo para RPG",
+    "rpg-apps-angular-desc": "Um aplicativo simples de RPG com rolagem de dados, Hooks, gerador de Tesouro, rastreador de iniciativa e gerador de npc para dnd 4ª edição",
+    "todo-app": "Lista de Tarefas",
+    "todo-app-desc": "Um aplicativo com lista de Tarefas. Usuário pode adicionar Tarefa, marcar/desmarcar e remover tarefa. Aula ministrada por Dev Ed",
+    "pokedex": "Agenda Pokemon",
+    "pokedex-desc": "Uma Pokédex Simples. Você pode pesquisar Pokémons pelo nome e ver seus detalhes. API usada: pokeapi",
+    "wwe-trivia-rumble": "WWE Trivia Rumble",
+    "wwe-trivia-rumble-desc": "Uma lista com perguntas relacionadas à WWE. Você pode filtrar digitando a pergunta na caixa de texto. ",
+    "alura-cursos": "Repósitorio do Curso Alura",
+    "alura-cursos-desc": "Repositório dos arquivos do Curso Alura",
+    "tour-of-heroes": "Lista de Heróis",
+    "tour-of-heroes-desc": "Tutorial de Angular. Lista de Super-Herois",
+    "lost-judgement-tsx": "Lost Judgement Lista de Material",
+    "lost-judgement-tsx-desc": "Lista de Material para o jogo Lost Judgement"
   },
   "invoices": "Faturas",
   "about": {
@@ -29,11 +29,30 @@
     "part2": "Essa pagina foi feita usando ReactJs.<br/> Componentes usados:"
   },
   "toggleDark": "Ativar Modo Escuro",
-  "toggleLight": "Ativar Modo Claro",  
+  "toggleLight": "Ativar Modo Claro",
   "language": "Linguagem",
   "all": "Todos",
   "others": "Outros",
   "footer": {
     "part1": "E-mail para contato"
+  },
+  "skills": {
+    "name": "Habilidades",
+    "html5": "HTML5",
+    "css3": "CSS3",
+    "sass": "SASS",
+    "jsTs": "Javascript / Typescript",
+    "react": "ReactJs",
+    "angular": "Angular",
+    "bootstrap": "Bootstrap",
+    "github": "Git / Github",
+    "html5Desc": "HTML5 (Hypertext Markup Language) é uma linguagem de marcação para publicação de conteúdos de texto e multimidia na web.",
+    "css3Desc": "CSS é uma linguagem de estilo, usado para estilizar um documento HTML",
+    "sassDesc": "SASS é uma linguagem de extensão do CSS com uma sintaxe mais eficiente e outros recursos ao CSS",
+    "jsTsDesc": "Javascript é uma linguagem de programação, que permite paginas da Web interativas. Junto com HTML e CSS, é uma parte essencial dos aplicativos da web. TypeScript é um superconjunto sintático estrito de JavaScript com sintaxe adicionada para tipos.",
+    "reactDesc": "React é uma biblioteca JavaScript para construção de interfaces de usuário.",
+    "angularDesc": "Angular é uma estrutura de design de aplicativos e plataforma de desenvolvimento para criar aplicativos de página única eficientes e sofisticados.",
+    "bootstrapDesc": "Bootstrap é um poderoso kit de ferramentas de front-end repleto de recursos. Construa qualquer coisa – do protótipo à produção – em minutos.",
+    "githubDesc": "GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git. Ele permite que programadores, utilitários ou qualquer usuário cadastrado na plataforma contribuam em projetos privados e/ou Open Source de qualquer lugar do mundo."
   }
 }

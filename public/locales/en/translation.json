@@ -35,5 +35,24 @@
   "others": "Others",
   "footer": {
     "part1": "Contact E-mail:"
+  },
+  "skills": {
+    "name": "Skills",
+    "html5": "HTML5",
+    "css3": "CSS3",
+    "sass": "SASS",
+    "jsTs": "Javascript / Typescript",
+    "react": "ReactJs",
+    "angular": "Angular",
+    "bootstrap": "Bootstrap",
+    "github": "Git / Github",
+    "html5Desc": "HTML5 (Hypertext Markup Language) is a markup language for publishing text and multimedia content on the web.",
+    "css3Desc": "CSS is a style language, used to style an HTML document",
+    "sassDesc": "SASS is a CSS extension language with more efficient syntax and other css features",
+    "jsTsDesc": "Javascript is a programming language that allows interactive web pages. Along with HTML and CSS, it is an essential part of web applications. TypeScript is a strict syntactic superset of JavaScript with syntax added for types.",
+    "reactDesc": "React is a JavaScript library for building user interfaces.",
+    "angularDesc": "Angular is an application design framework and development platform to create efficient and sophisticated single-page applications.",
+    "bootstrapDesc": "Bootstrap is a powerful front-end toolkit packed with features.",
+    "githubDesc": "GitHub is a file and version-controlled file hosting platform using Git. It allows developers, utilities or any user registered on the platform to contribute to private and/or Open Source projects from anywhere in the world."
   }
 }

@@ -4,7 +4,6 @@ import './App.css';
 import { Outlet } from "react-router-dom";
 import ResponsiveAppBar from "./components/header"
 import Footer from "./components/footer"
-import { red } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
@@ -13,16 +12,16 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      light: '#757ce8',
       main: '#3f50b5',
+      light: '#757ce8',      
       dark: '#002884',
       contrastText: '#fff',
     },
     secondary: {
-      light: '#ff7961',
       main: '#f44336',
+      light: '#ff7961',      
       dark: '#ba000d',
-      contrastText: '#000',
+      contrastText: '#fff',
     },
   },
 });
@@ -40,10 +39,6 @@ const darkTheme = createTheme({
       light: '#26d701',
       dark: '#016e06',
     },
-    // background: {
-    //   default: '#212121',
-    //   paper: '#424242',
-    // },
   },
 });
 

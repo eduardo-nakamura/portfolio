@@ -16,6 +16,11 @@ import UsIcon from "../assets/us.png";
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Link } from "react-router-dom";
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faCoffee)
+
 type Anchor = 'left' | 'right';
 
 
@@ -98,9 +103,9 @@ const ResponsiveAppBar = (props: any) => {
                 <List>
                   {menuLinks.map((page, index) => (
                     <ListItem key={'btn-' + index} button component={Link} to={page.location}>
-                      <ListItemButton>
-                        <page.icon sx={{ mr: 1 }} />
-                        <ListItemText primary={t(page.name)} />
+                      <ListItemButton>                       
+                        {page.icon}
+                        <ListItemText sx={{ml:2}} primary={t(page.name)} />
                       </ListItemButton>
                     </ListItem>
                   ))}

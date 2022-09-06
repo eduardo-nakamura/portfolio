@@ -4,7 +4,11 @@ import { useTheme } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
 import aboutAvatar from "../assets/picture.png";
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
+library.add(faCoffee)
 export default function About() {
     const { t } = useTranslation();
     const theme = useTheme();
@@ -31,7 +35,7 @@ export default function About() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
                 {t('about.part1')}
             </Typography>
-            {/* {`spacing ${theme.palette.mode}`} */}
+          
             <Box sx={{ background: theme.palette.mode === 'dark' ? theme.palette.common.black : `#0000000D`, padding: 3, margin: '30px auto', width: '100%', maxWidth: '500px' }}>
                 <Typography variant="h5" color="text.secondary" paragraph>
                     Skills
@@ -42,8 +46,6 @@ export default function About() {
                     </Fade>
                 ))}
             </Box>
-
-
             <Typography align="center">
                 <Trans i18nKey="about.part2">
                     Essa pagina foi feita usando ReactJs.

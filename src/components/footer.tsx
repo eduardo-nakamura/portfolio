@@ -9,10 +9,10 @@ const Footer = (props: any) => {
     const { t } = useTranslation();
 
     return (
-        <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-            <Typography variant="h6" align="center" gutterBottom>
+        <Box sx={{ bgcolor: theme.palette.background.paper, p: 6 }} component="footer">
+            {/* <Typography variant="h6" align="center" gutterBottom>
                 Footer
-            </Typography>
+            </Typography> */}
             <Typography
                 variant="subtitle1"
                 align="center"

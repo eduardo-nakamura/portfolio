@@ -7,6 +7,7 @@ import { Navigate, Routes, Route, HashRouter } from "react-router-dom";
 
 import Home from "./pages/Home"
 import About from "./pages/About"
+import Skills from "./pages/Skills"
 import Invoices from "./pages/Invoices"
 import InvoiceDetail from "./pages/InvoiceDetail"
 import './i18n';
@@ -24,6 +25,7 @@ root.render(
         <Route index element={<About />}/>
         <Route path="home" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="skills" element={<Skills />} />
         <Route path="invoices" element={<Invoices />}>
           <Route index element={
             <main style={{ padding: "1rem" }}>

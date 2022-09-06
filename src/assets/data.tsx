@@ -8,9 +8,17 @@ import TourOfHeroesImg from "../assets/tour-of-heroes.png"
 import LostJudgementImg from "../assets/lost-judgement-tsx.png"
 import AluraImg from "../assets/alura-cursos.png"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add(fas,far, fab)
+
 const menuLinks = [
-  {location: '/home', name: 'home.name', icon: HomeIcon},
-  {location: '/about', name: 'about.name', icon: InfoIcon},
+  {location: '/home', name: 'home.name', icon: <FontAwesomeIcon icon="house" />},
+  {location: '/about', name: 'about.name', icon: <FontAwesomeIcon icon="user" />},
+  {location: '/skills', name: 'skills.name', icon: <FontAwesomeIcon icon="computer" />},
 ]
 
 export const projectsList = [
