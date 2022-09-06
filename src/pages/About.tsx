@@ -25,24 +25,24 @@ export default function About() {
 
     return (
         <>
-            <Box sx={{ textAlign: 'center', pb: 3 }}>
+            <Box sx={{ margin: '0 auto', pb: 3,width: '100%', maxWidth:{xs: '150px', md: '300px'} }}>
                 <img alt="Eduardo Nakamura" src={aboutAvatar}
-                    style={{ width: '50%', maxWidth: '200px', borderRadius: '50%' }} />
+                    style={{ width: '100%', borderRadius: '50%' }} />
             </Box>
-            <Typography component="h1" variant="h4" align="center" color="text.secondary" paragraph>
+            <Typography component="h1" variant="h5" align="center" color="text.secondary">
                 Eduardo Issamu Nakamura
             </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            <Typography variant="h6" align="center" color="text.secondary">
                 {t('about.part1')}
             </Typography>
           
             <Box sx={{ background: theme.palette.mode === 'dark' ? theme.palette.common.black : `#0000000D`, padding: 3, margin: '30px auto', width: '100%', maxWidth: '500px' }}>
-                <Typography variant="h5" color="text.secondary" paragraph>
+                <Typography variant="h6" color="text.secondary" paragraph>
                     Skills
                 </Typography>
                 {skillList.map((skill, index) => (
                     <Fade key={index} in={checked} style={{ transitionDelay: checked ? `${index * 700}ms` : '0ms' }}>
-                        <Typography sx={{ fontSize: '20px' }}>{skill}</Typography>
+                        <Typography variant="h6">{skill}</Typography>
                     </Fade>
                 ))}
             </Box>

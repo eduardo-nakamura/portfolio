@@ -39,11 +39,11 @@ export default function Skills() {
             </Typography>
             <Box>
                 <Grid container spacing={1}>
-                    <Grid item xs={state === "" ? 12 : 6} md={state === "" ? 12 : 8}>
+                    <Grid item xs={state === "" ? 12 : 2} md={state === "" ? 12 : 8}>
                         <Grid container spacing={1}>
                             {skillList.map((skill, index) => (
                                 <Fade key={index} in={checked} style={{ transitionDelay: checked ? `${index * 400}ms` : '0ms' }}>
-                                    <Grid item xs={state === "" ? 6 : 12} md={3} sx={{ 
+                                    <Grid item xs={state === "" ? 3 : 12} md={3} sx={{ 
                                         textAlign: 'center', 
                                         transition: 'all 2s', 
                                         filter: state === skill.name ? 'saturate(2)' : 'saturate(1)',
@@ -55,13 +55,13 @@ export default function Skills() {
                                         <Box onClick={() => selectSkill(skill.name)} display="flex" flexDirection="column" justifyContent="space-between" sx={{ color: theme.palette.primary.contrastText, background: theme.palette.primary.dark, height: '100%' }}>
                                             <Box sx={{
                                                     background: theme.palette.primary.main,
-                                                    fontSize: '80px',
+                                                    fontSize: state === "" ? {xs: '60px', md:'80px'}: {xs: '30px', md:'80px'},
                                                     textAlign: 'center'
                                                     
                                                 }}>
                                                 {skill.icone}
                                             </Box>
-                                            <Typography sx={{padding: '5px 0'}} >{t(`skills.${skill.name}`)}</Typography>
+                                            <Typography sx={{padding: '5px 0', display: {xs: 'none', md: 'block'}}} >{t(`skills.${skill.name}`)}</Typography>
                                         </Box>
 
                                     </Grid>
@@ -69,10 +69,11 @@ export default function Skills() {
                             ))}
                         </Grid>
                     </Grid>
-                    <Grid item xs={6} md={4}>
+                    <Grid item xs md={4}>
                         <Fade in={state !== ""} style={{ transitionDelay: '100ms' }}>
                             <Box sx={{ background: theme.palette.primary.main, color: theme.palette.primary.contrastText,position: 'relative', height: '100%', padding: '20px 35px 20px 20px', display: state !== "" ? "auto" : "none" }}> 
                                 <FontAwesomeIcon style={{position: 'absolute', top:10, right:10, fontSize: 25}} onClick={() => selectSkill("")} icon={['fas', 'xmark']} />                               
+                                <Typography variant="h5" sx={{display: {xs: 'block', md: 'none'}, pb:2}}>{t(`skills.${state}`)}</Typography>
                                 <Typography variant="h6">{t(`skills.${state}Desc`)}</Typography>
                             </Box>
                         </Fade>

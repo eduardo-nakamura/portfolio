@@ -14,7 +14,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import BrIcon from "../assets/br.png";
 import UsIcon from "../assets/us.png";
 import SettingsIcon from '@mui/icons-material/Settings';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -80,7 +80,7 @@ const ResponsiveAppBar = (props: any) => {
               textDecoration: 'none',
             }}
           >
-            Eduardo Nakamura
+           
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -136,7 +136,17 @@ const ResponsiveAppBar = (props: any) => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {menuLinks.map((page, index) => (
-              <Link className="btn-header" key={'btn-' + index} to={page.location}>{t(page.name)}</Link>
+              <NavLink  
+                style={({ isActive }) => ({
+                  transform: isActive ? "scale(1.2)" : "scale(1)",                  
+                  fontWeight: isActive ? "900" : "400",
+                  color: isActive ? theme.palette.secondary.main : theme.palette.secondary.contrastText,
+                })}
+                className="btn-header" 
+                key={'btn-' + index} 
+                to={page.location}>
+                  {t(page.name)}
+              </NavLink>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
