@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1b6e269e.css",
-    "main.js": "/portfolio/static/js/main.6982c990.js",
+    "main.js": "/portfolio/static/js/main.81329a97.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/rpg-apps-angular.png": "/portfolio/static/media/rpg-apps-angular.62ec5d4a26759224bc67.png",
+    "static/media/rpg-apps-angular.png": "/portfolio/static/media/rpg-apps-angular.4fc47b9064dcdd9dc7d6.png",
     "static/media/picture.png": "/portfolio/static/media/picture.75fca58574df4b8bb86a.png",
-    "static/media/lost-judgement-tsx.png": "/portfolio/static/media/lost-judgement-tsx.cb6ef3d4eff9f95c231a.png",
-    "static/media/pokedex.png": "/portfolio/static/media/pokedex.48344e49e6ff11a53d9c.png",
-    "static/media/todo-app.png": "/portfolio/static/media/todo-app.010e01e85e0f8d864a61.png",
-    "static/media/alura-cursos.png": "/portfolio/static/media/alura-cursos.d5b765fe5a25c1b6b749.png",
-    "static/media/wwe-trivia-rumble.png": "/portfolio/static/media/wwe-trivia-rumble.0cd919fc88470531c37b.png",
-    "static/media/tour-of-heroes.png": "/portfolio/static/media/tour-of-heroes.4db8e9f4404225541622.png",
+    "static/media/pokedex.png": "/portfolio/static/media/pokedex.af5c19e4b661cab11322.png",
+    "static/media/lost-judgement-tsx.png": "/portfolio/static/media/lost-judgement-tsx.fc0b8657e422eeebae3a.png",
+    "static/media/alura-cursos.png": "/portfolio/static/media/alura-cursos.6497bb53e7d9ad77f92a.png",
+    "static/media/todo-app.png": "/portfolio/static/media/todo-app.5642cf12a46b8446a9a3.png",
+    "static/media/wwe-trivia-rumble.png": "/portfolio/static/media/wwe-trivia-rumble.02a8686d92d879cb1763.png",
+    "static/media/text-adventure-react.png": "/portfolio/static/media/text-adventure-react.c195a3195589bb0d40b7.png",
+    "static/media/tour-of-heroes.png": "/portfolio/static/media/tour-of-heroes.ee232be6137d473afc09.png",
     "index.html": "/portfolio/index.html",
     "static/media/getFetch.cjs": "/portfolio/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.1b6e269e.css.map": "/portfolio/static/css/main.1b6e269e.css.map",
-    "main.6982c990.js.map": "/portfolio/static/js/main.6982c990.js.map",
+    "main.81329a97.js.map": "/portfolio/static/js/main.81329a97.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b6e269e.css",
-    "static/js/main.6982c990.js"
+    "static/js/main.81329a97.js"
   ]
 }

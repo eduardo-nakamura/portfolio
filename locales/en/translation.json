@@ -20,7 +20,9 @@
     "tour-of-heroes": "Tour of Heroes",
     "tour-of-heroes-desc": "Angular Tutorial. List of Super Heroes",
     "lost-judgement-tsx": "Lost Judgement Material List",
-    "lost-judgement-tsx-desc": "Material List for the game Lost Judgement"
+    "lost-judgement-tsx-desc": "Material List for the game Lost Judgement",
+    "text-adventure-react": "Text Adventure",
+    "text-adventure-react-desc":"A very simple and short text adventure game based on 70's and 80's games"
   },
   "invoices": "Invoices",
   "about": {
